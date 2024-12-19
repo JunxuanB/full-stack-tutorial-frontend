@@ -26,7 +26,7 @@ const HelloWorld = () => {
     }, []);
 
     useEffect(() => {
-        axios.post('https://junxuanb.com/api/products.json', {
+        axios.post('https://jsonplaceholder.typicode.com/posts', {
             name: 'Orange',
             price: 1.49
         })
@@ -37,6 +37,8 @@ const HelloWorld = () => {
 
     return (
         <Flex vertical gap={'middle'}>
+            <button onClick={() => navigate('/cart')}>购物车</button>
+
             <div>
                 {products.map(product => (
                     <div key={product.id}>

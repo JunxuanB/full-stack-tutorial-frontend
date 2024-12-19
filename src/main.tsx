@@ -5,6 +5,7 @@ import Template from "./pages/Template";
 import Page1 from "./pages/temp/Page1";
 import Page2 from "./pages/temp/Page2";
 import Page3 from "./pages/temp/Page3";
+import Cart from "./pages/cart";
 
 createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
             <Route path="/hello" element={<HelloWorld />} />
             <Route path="/hello/*" element={<HelloWorld />} />
             <Route path="/hello/:id" element={<HelloWorld />} />
+            <Route path="/cart" element={<Cart />} />
 
             <Route path="/temp/" element={<Template />} >
                 <Route index element={<Page1 />} />
